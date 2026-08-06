@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <delete dir="C:\Users\ADMIN\Desktop\Ganesh\operator-notification-service\target/aar-temp" />
+    <mkdir dir="C:\Users\ADMIN\Desktop\Ganesh\operator-notification-service\target/aar-temp" />
+    <unzip src="C:\Users\ADMIN\Desktop\Ganesh\operator-notification-service\target/operator-notification-service-0.0.1-SNAPSHOT.aar" dest="C:\Users\ADMIN\Desktop\Ganesh\operator-notification-service\target/aar-temp" />
+    <copy todir="C:\Users\ADMIN\Desktop\Ganesh\operator-notification-service\target/aar-temp/META-INF">
+      <fileset dir="C:\Users\ADMIN\Desktop\Ganesh\operator-notification-service/src/generated/resources">
+        <include name="*.wsdl" />
+      </fileset>
+    </copy>
+    <copy todir="C:\Users\ADMIN\Desktop\Ganesh\operator-notification-service\target/aar-temp/META-INF">
+      <fileset dir="C:\Users\ADMIN\Desktop\Ganesh\operator-notification-service/src/generated/resources">
+        <include name="*.xsd" />
+      </fileset>
+    </copy>
+    <jar basedir="C:\Users\ADMIN\Desktop\Ganesh\operator-notification-service\target/aar-temp" destfile="C:\Users\ADMIN\Desktop\Ganesh\operator-notification-service\target/operator-notification-service-0.0.1-SNAPSHOT.aar" />
+    <copy file="C:\Users\ADMIN\Desktop\Ganesh\operator-notification-service\target/operator-notification-service-0.0.1-SNAPSHOT.aar" todir="C:\Users\ADMIN\Desktop\Ganesh\operator-notification-service\target/axis2/WEB-INF/services" overwrite="true" />
+  </target>
+</project>

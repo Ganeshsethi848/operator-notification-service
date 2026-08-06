@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://telecom.com/operator" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://telecom.com/operator">
+    <xs:element name="NotifyOperator">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="portId" type="xs:string"/>
+                <xs:element name="mobileNumber" type="xs:string"/>
+                <xs:element name="donorOperator" type="xs:string"/>
+                <xs:element name="recipientOperator" type="xs:string"/>
+                <xs:element name="username" type="xs:string"/>
+                <xs:element name="password" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
